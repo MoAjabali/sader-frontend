@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Others
+src/app/favicon2.ico
+public/assets/imgs/path1.svg
