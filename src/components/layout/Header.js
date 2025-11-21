@@ -16,7 +16,7 @@ import Link from "next/link";
 import { useState } from "react";
 import SaudiRiyalIcon from "../custom/SaudiRiyalSymbol";
 
-const isAuth = false;
+const isAuth = true;
 
 
 export function Header() {
@@ -36,8 +36,8 @@ function TopHeader(){
     <div className="bg-primary text-primary-foreground py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <p className="text-sm"> 
-           {"توصيل مجاني للطلبات التي تزيد عن "}
-          <span className="font-bold">50</span><SaudiRiyalIcon color="white" size={18}/>
+           توصيل مجاني للطلبات التي تزيد عن 
+          <span className="font-bold"> 300</span><SaudiRiyalIcon color="white" size={18}/>
         </p>
         <div className="flex gap-4 text-sm">
           <button className="hover:opacity-80 cursor-pointer">English</button>
