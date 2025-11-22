@@ -315,21 +315,27 @@ function ActionsBar({className, isDropDownMenu = false}){
         <>
           {/* المستخدم المسجل */}
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Heart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
-            {isDropDownMenu && "المفضلة"}
+            <Link href="">
+              <Heart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
+              {isDropDownMenu && "المفضلة"}
+            </Link>
           </Button>
 
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <ShoppingCart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
-            {isDropDownMenu && "سلة التسوق"}
-            <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-secondary text-white text-xs border-2 border-white">
-              3
-            </Badge>
+            <Link href="/cart">
+              <ShoppingCart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
+              {isDropDownMenu && "سلة التسوق"}
+              <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-secondary text-white text-xs border-2 border-white">
+                3
+              </Badge>
+            </Link>
           </Button>
 
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <User className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
-            {isDropDownMenu && "حسابي"}
+            <Link href="">
+              <User className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
+             {isDropDownMenu && "حسابي"}
+            </Link>
           </Button>
         </>
       ) : (
