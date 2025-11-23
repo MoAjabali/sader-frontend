@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import SaudiRiyalIcon from "../custom/SaudiRiyalSymbol";
+import SaudiRiyalIcon from "@components/custom/SaudiRiyalSymbol";
 
 const isAuth = true;
 
@@ -48,6 +48,7 @@ function TopHeader(){
     </div>
   );
 }
+
 function MainHeader(){
   return (
     <div className="container mx-auto px-4">
@@ -232,19 +233,19 @@ function NavBar({className, linkClassName, onClick = () => {}, isMobile = false}
     <NavigationMenu className={className} dir="rtl">
       <NavigationMenuList>
         <NavigationMenuItem className={linkClassName}>
-          <NavigationMenuLink onClick={onClick} >
+          <NavigationMenuLink onClick={onClick} asChild >
               <Link href="/">الرئيسية</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className={linkClassName}>
-          <NavigationMenuLink  onClick={onClick} >
+          <NavigationMenuLink  onClick={onClick} asChild >
               <Link href="/products">المتجر</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className={linkClassName}>
-          <NavigationMenuLink  onClick={onClick} className="break-keep" >
+          <NavigationMenuLink  onClick={onClick} className="break-keep" asChild>
               <Link href="/about">من نحن</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -278,7 +279,7 @@ function NavBar({className, linkClassName, onClick = () => {}, isMobile = false}
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
-                <NavigationMenuLink>
+                <NavigationMenuLink asChild>
                   <Link
                     className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
                     href="/contact"
@@ -360,7 +361,7 @@ function ActionsBar({className, isDropDownMenu = false}){
 function ListItem({ title, children, href, ...props }){
   return (
     <li {...props}>
-      <NavigationMenuLink>
+      <NavigationMenuLink asChild>
         <Link href={href}>
           <div className="text-sm leading-none">{title}</div>
           <p className="text-muted-foreground font-medium line-clamp-2 text-sm leading-snug">

@@ -8,6 +8,7 @@ import { Input } from "@components/ui/input";
 import { Badge } from "@components/ui/badge";
 import { X, Plus, Minus, Tag, ArrowLeft, ArrowRight } from "lucide-react";
 import Image from 'next/image';
+import Link from "next/link";
 
 const cartItems = [
   {
@@ -64,7 +65,7 @@ export function CartPage() {
         <div className="border-b">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <a href="#home" className="hover:text-primary">الرئيسية</a>
+              <Link href="#home" className="hover:text-primary">الرئيسية</Link>
               <span>/</span>
               <span className="text-foreground">عربة التسوق</span>
             </div>
@@ -195,12 +196,16 @@ export function CartPage() {
                   </div>
 
                   <Button className="w-full bg-primary hover:bg-primary/90 mb-3" size="lg">
+                    <Link href="/checkout" className="">
                     اتمام الشراء
-                    <ArrowLeft className="h-5 w-5 mr-2" />
+                      <ArrowLeft className="h-5 w-5 mr-2" />
+                    </Link>
                   </Button>
 
                   <Button variant="outline" className="w-full" size="lg">
+                    <Link href="/products">
                     متابعة التسوق
+                    </Link>
                   </Button>
 
                   {/* المزايا */}

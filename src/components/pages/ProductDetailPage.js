@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@components/ui/tabs";
 import { ShoppingCart, Heart, Share2, Star, Minus, Plus, Shield, Leaf, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from 'next/image';
+import Link from "next/link";
 
 const relatedProducts = [
   {
@@ -61,11 +62,11 @@ export function ProductDetailPage() {
         <div className="border-b">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <a href="#home" className="hover:text-primary">الرئيسية</a>
+              <Link href="#home" className="hover:text-primary">الرئيسية</Link>
               <span>/</span>
-              <a href="#shop" className="hover:text-primary">المتجر</a>
+              <Link href="#shop" className="hover:text-primary">المتجر</Link>
               <span>/</span>
-              <a href="#food" className="hover:text-primary">طعام</a>
+              <Link href="#food" className="hover:text-primary">طعام</Link>
               <span>/</span>
               <span className="text-foreground">زيت زيتون عضوي</span>
             </div>

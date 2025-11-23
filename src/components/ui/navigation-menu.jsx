@@ -6,9 +6,9 @@ import { ChevronDownIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 function getDir() {
-  if (typeof document !== "undefined") {
-    return document.dir || document.documentElement?.dir || "rtl"
-  }
+  // if (typeof document !== "undefined") {
+  //   return document.dir || document.documentElement?.dir || "rtl"
+  // }
   return "rtl"
 }
 

@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-
 import { cn } from "@/lib/utils"
 
 function Slider({
@@ -11,6 +10,7 @@ function Slider({
   value,
   min = 0,
   max = 100,
+  dir = "rtl", // إضافة دعم للاتجاه
   ...props
 }) {
   const _values = React.useMemo(() =>
@@ -27,8 +27,10 @@ function Slider({
       value={value}
       min={min}
       max={max}
+      dir={dir} // تمرير الاتجاه
       className={cn(
         "relative flex w-full touch-none items-center select-none data-[disabled]:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
+        dir === "rtl" && "flex-row-reverse", // عكس الاتجاه لـ RTL
         className
       )}
       {...props}>
@@ -40,7 +42,8 @@ function Slider({
         <SliderPrimitive.Range
           data-slot="slider-range"
           className={cn(
-            "bg-primary absolute data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full"
+            "bg-primary absolute data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full",
+            dir === "rtl" && "right-0" // تعديل للموقع في RTL
           )} />
       </SliderPrimitive.Track>
       {Array.from({ length: _values.length }, (_, index) => (
