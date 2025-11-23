@@ -11,7 +11,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@components/ui/pagination";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -19,11 +19,12 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+} from "@components/ui/breadcrumb"
 import { PageHeader } from "@components/layout/PageHeader";
 import { FilterSidebar } from "@components/custom/Filter";
 import { ProductGrid } from "@components/custom/ProductCard";
 import { Toolbar } from "@components/custom/Toolbar";
+import { BreadcrumbSection } from "@components/layout/BreadcrumbSection";
 
 const products = [
   {
@@ -106,17 +107,12 @@ export function ProductListingPage() {
       
       <main className="flex-1 bg-white">
         {/* Header */}
-        <Breadcrumb className="container mx-auto px-4 py-4">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">الرئيسية</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>المتجر</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <BreadcrumbSection 
+          breadcrumbLinks={[
+            {title: "الرئيسية", link: "/"}, 
+            {title:"المتجر"}
+          ]} 
+          />
         <PageHeader 
           title="المنتجات العضوية"
           subtitle="اكتشف مجموعتنا المختارة من المنتجات العضوية والصحية"

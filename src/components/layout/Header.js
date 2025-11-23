@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@components/ui/navigation-menu"
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
