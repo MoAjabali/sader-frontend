@@ -348,7 +348,7 @@ function ActionsBar({className, isDropDownMenu = false}){
             </Link>
           </Button>
           <Button size="sm" className={`bg-primary hover:bg-primary/90 text-white ${!isDropDownMenu && "hidden sm:flex"}`}>
-            <Link href="/auth/register" className="flex items-center">
+            <Link href="/auth/signup" className="flex items-center">
               مستخدم جديد
             </Link>
           </Button>
