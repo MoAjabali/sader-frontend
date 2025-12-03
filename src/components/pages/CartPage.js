@@ -12,7 +12,7 @@ import { X, Plus, Minus, Tag, ArrowLeft, ArrowRight } from "lucide-react";
 import { FaCartShopping } from "react-icons/fa6";
 import Image from 'next/image';
 import Link from "next/link";
-import SaudiRiyalIcon from "../custom/SaudiRiyalSymbol";
+import SaudiRiyalIcon from "@components/custom/SaudiRiyalSymbol";
 
 const cartItems = [
   {
@@ -289,7 +289,7 @@ function CheckoutButtons() {
   return (
     <>
       <Button className="w-full bg-primary hover:bg-primary/90 mb-3" size="lg">
-        <Link href="/checkout" className="flex">
+        <Link href="/checkout/first-step" className="flex">
           اتمام الشراء<ArrowLeft className="h-5 w-5 mr-2" />
         </Link>
       </Button>

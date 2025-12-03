@@ -8,11 +8,13 @@ import { cn } from "@/lib/utils"
 
 function RadioGroup({
   className,
+  dir = "rtl",
   ...props
 }) {
   return (
     <RadioGroupPrimitive.Root
       data-slot="radio-group"
+      dir={dir}
       className={cn("grid gap-3", className)}
       {...props} />
   );
