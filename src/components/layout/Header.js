@@ -316,7 +316,7 @@ function ActionsBar({className, isDropDownMenu = false}){
         <>
           {/* المستخدم المسجل */}
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Link href="">
+            <Link href="/favorites">
               <Heart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
               {isDropDownMenu && "المفضلة"}
             </Link>
