@@ -333,7 +333,7 @@ function ActionsBar({className, isDropDownMenu = false}){
           </Button>
 
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Link href="" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
+            <Link href="/profile" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
               <User className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
              {isDropDownMenu && "حسابي"}
             </Link>
