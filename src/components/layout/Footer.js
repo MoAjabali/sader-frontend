@@ -77,11 +77,11 @@ function QuickLinksSection(){
             الشهادات العضوية
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             المدونة والنصائح
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/about#faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             الأسئلة الشائعة
@@ -120,6 +120,11 @@ function CustomerServicesSection(){
         <li>
           <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             سياسة الخصوصية
+          </Link>
+        </li>
+        <li>
+          <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            سياسة الاستخدام
           </Link>
         </li>
       </ul>
