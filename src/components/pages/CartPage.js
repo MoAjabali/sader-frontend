@@ -201,8 +201,10 @@ function QuantitySelector({ quantity, onDecrease, onIncrease }) {
 function ContinueShoppingButton() {
   return (
     <Button variant="outline" className="mt-6">
-      متابعة التسوق
-      <ArrowLeft className="h-4 w-4 ml-2" />
+      <Link href="/products" className="flex justify-center gap-2 w-full"> 
+        متابعة التسوق                    
+        <ArrowLeft className="h-4 w-4 ml-2" />
+      </Link>
     </Button>
   );
 }

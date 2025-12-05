@@ -13,6 +13,7 @@ import { TbRibbonHealth } from "react-icons/tb";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SaudiRiyalIcon from "../custom/SaudiRiyalSymbol";
 
 export function HomePage() {
   return (
@@ -65,11 +66,15 @@ function HeroSection(){
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-تسوق الآن                    
-                <ArrowLeft className="h-5 w-5 mr-2" />
+                <Link href="/products" className="flex w-full"> 
+  تسوق الآن                    
+                  <ArrowLeft className="h-5 w-5 mr-2" />
+                </Link>
               </Button>
               <Button size="lg" variant="outline">
-                اعرف المزيد
+                <Link href="/about" >
+                  اعرف المزيد
+                </Link>
               </Button>
             </div>
           </motion.div>
@@ -117,7 +122,10 @@ function FeaturesSection(){
       icon: Truck,
       title: "توصيل سريع",
       // titleAr: "توصيل سريع",
-      description: "شحن مجاني للطلبات فوق 50$"
+      description: <>
+        شحن مجاني للطلبات فوق 300  
+        <SaudiRiyalIcon size={12} color="#717182"/>
+      </>
     },
     {
       icon: Heart,

@@ -316,14 +316,14 @@ function ActionsBar({className, isDropDownMenu = false}){
         <>
           {/* المستخدم المسجل */}
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Link href="/favorites">
+            <Link href="/favorites" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
               <Heart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
               {isDropDownMenu && "المفضلة"}
             </Link>
           </Button>
 
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Link href="/cart">
+            <Link href="/cart" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
               <ShoppingCart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
               {isDropDownMenu && "سلة التسوق"}
               <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-secondary text-white text-xs border-2 border-white">
@@ -333,7 +333,7 @@ function ActionsBar({className, isDropDownMenu = false}){
           </Button>
 
           <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Link href="">
+            <Link href="" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
               <User className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
              {isDropDownMenu && "حسابي"}
             </Link>
