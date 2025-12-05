@@ -73,7 +73,7 @@ function QuickLinksSection(){
           </Link>
         </li>
         <li>
-          <Link href="/certification" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <Link href="/about#certification" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             الشهادات العضوية
           </Link>
         </li>
@@ -83,7 +83,7 @@ function QuickLinksSection(){
           </Link>
         </li>
         <li>
-          <Link href="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <Link href="/about#faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             الأسئلة الشائعة
           </Link>
         </li>
