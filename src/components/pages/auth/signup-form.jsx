@@ -113,8 +113,8 @@ export function SignupForm({
       </Card>
       <FieldDescription className="px-6 text-center">
         بالنقر على تسجيل الدخول انت توافق على  
-         <a href="#"> سياسة الاستخدام</a>{" "}
-        و <a href="#"> سياسة الخصوصية</a>.
+         <a href="/terms"> سياسة الاستخدام</a>{" "}
+        و <a href="/privacy"> سياسة الخصوصية</a>.
       </FieldDescription>
     </div>
   );
