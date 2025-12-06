@@ -309,7 +309,7 @@ function NavBar({className, linkClassName, onClick = () => {}, isMobile = false}
     </NavigationMenu>
   );
 }
-function ActionsBar({className, isDropDownMenu = false}){
+function ActionsBar({className, isDropDownMenu}){
   return(
     <div className={className}>
       {isAuth ? (
@@ -322,7 +322,7 @@ function ActionsBar({className, isDropDownMenu = false}){
             </Link>
           </Button>
 
-          <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
+          <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" : "w-full justify-start text-lg relative"}>
             <Link href="/cart" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
               <ShoppingCart className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
               {isDropDownMenu && "سلة التسوق"}
@@ -332,10 +332,10 @@ function ActionsBar({className, isDropDownMenu = false}){
             </Link>
           </Button>
 
-          <Button variant="ghost" size={!isDropDownMenu ? "icon" : "default"} className={!isDropDownMenu ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
-            <Link href="/profile" className={isDropDownMenu && "flex items-center gap-2 w-full"}>
-              <User className={`h-5 w-5 ${isDropDownMenu && "ml-3"}`} />
-             {isDropDownMenu && "حسابي"}
+          <Button variant="ghost" size={(!isDropDownMenu) ? "icon" : "default"} className={(!isDropDownMenu) ? "relative hover:bg-accent" :"w-full justify-start text-lg relative"}>
+            <Link href="/profile" className={(isDropDownMenu) && "flex items-center gap-2 w-full"}>
+              <User className={`h-5 w-5 ${(isDropDownMenu) && "ml-3"}`} />
+             {(isDropDownMenu) && "حسابي"}
             </Link>
           </Button>
         </>

@@ -250,3 +250,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #004d2a;
 }
+
+/*  */
+.box-shadow-selected{
+  box-shadow: 0 0 0px 2px var(--primary);
+}
